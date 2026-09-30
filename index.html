@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Read Fast</title>
+<meta name="description" content="Read Fast shows your own PDFs, EPUBs and TXT files one word at a time, so you read faster with no training.">
+<link rel="icon" href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAQDAwQDAwQEAwQFBAQFBgoHBgYGBg0JCggKDw0QEA8NDw4RExgUERIXEg4PFRwVFxkZGxsbEBQdHx0aHxgaGxr/2wBDAQQFBQYFBgwHBwwaEQ8RGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhr/wAARCAAgACADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD5DskuP3bReWN0nlnc4UoeMbgfug54J64PpXqqfBnxw99pFtbW1nqMerWq3VpcWN2k8bRn1IwVI4yCBjNa/gfzbfw42qa4+hy29tejS/FE8dy099NZSBdgcEtGyH5dkwwUZRyCOfpfwjc6V4ETR9R0i00/RNJ1x5nA04Kytb7WWATS5Jc5wxOcBn4rqxOa1aCSitWc9HLKVZ3kzxGf9kfxo+mm7tNW0Oe4B2NbfahuV/7hYAqDx3IrwTxn4V1zwbqU+m+JtPn06+i+9FMmDjsR2IPYjivq3xZ8XtKs9a1uTwvDdxfuS0zzyuHuJid+z7Ow+QIwKqDyCWGMGtT9obQY/EHwQa41Szuk1zwukEgvLq2MTSJIwWRAzH94DuD5XgMOgzilRx+KU4+1d4y8rMmpgsNyv2ejX3HzB8HfH2j+Drm01PX7LSNas4SbK80i405TPLbudwnjlKlWZGHRsHHHIPH1PputeFvip4W1HT/AkN3bx2qzxwWMpiZmilO8lEViVUMCNnYHpivzwhnKEc4Iro9C8Z6n4fvIbrTbnyp4W3RuVDFT6gnkVGJwaxEbxlaXQ3oYp0JWlG6PsDxxLZXnhHwtZT6aln4ytZo006a0UK9rHbygPLJxllYRghGz8xPYGovjj8UryP4IWeieKrq2uvFuus0lxHBCIxBCJGIJUH5SQB9a8En/AGg/GF7K08t7aJcsmwzx2MSyEf723OfevNte8Q3muXkt1qNzLd3Mpy8srlmY/U08PgpQUZVpLTVJf1t95NfFxm2qMXro7/1v56H/2Q==">
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1f;
+    --muted: #5c5c68;
+    --rule: #e4e4ec;
+    --accent: #5B4FE0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14141a;
+      --fg: #ececf2;
+      --muted: #a0a0ae;
+      --rule: #2c2c36;
+      --accent: #9b91ff;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+  }
+  main { max-width: 44rem; margin: 0 auto; padding: 3rem 1.25rem 5rem; }
+  .brand { display: flex; align-items: center; gap: .75rem; margin-bottom: 2.5rem; }
+  .mark {
+    width: 44px; height: 44px; border-radius: 10px; overflow: hidden;
+    display: grid; place-items: center; flex: none;
+  }
+  .mark img { display: block; width: 100%; height: 100%; }
+  .brand-name { font-weight: 700; font-size: 1.15rem; letter-spacing: -.01em; }
+  h1 { font-size: 1.9rem; line-height: 1.2; letter-spacing: -.02em; margin: 0 0 1rem; }
+  h2 {
+    font-size: 1.15rem; margin: 2.5rem 0 .75rem; letter-spacing: -.01em;
+    padding-top: 1.5rem; border-top: 1px solid var(--rule);
+  }
+  ul { padding-left: 1.25rem; }
+  li { margin: .4rem 0; }
+  a { color: var(--accent); }
+  .lead {
+    font-size: 1.05rem; padding: 1rem 1.15rem; border-left: 3px solid var(--accent);
+    background: color-mix(in srgb, var(--accent) 7%, transparent);
+    border-radius: 0 8px 8px 0; margin: 0 0 2rem;
+  }
+  footer { margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule);
+           color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <div class="brand">
+    <span class="mark" aria-hidden="true"><img src="data:image/jpeg;base64,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" alt=""></span>
+    <span class="brand-name">Read Fast</span>
+  </div>
+  <h1>Read your own books, faster</h1>
+  <p class="lead">Read Fast shows your PDFs, EPUBs and TXT files one word at a
+  time in the middle of the screen. Your eyes stay still, so you read faster,
+  with no training.</p>
+  <p>The page stays behind the word, so you never lose the thread. Bookmark
+  pages, collect sentences into notes, and see a PDF page as printed when it
+  has pictures or tables. Your books stay on your phone.</p>
+  <h2>Get the app</h2>
+  <ul>
+    <li><a href="https://apps.apple.com/app/id6813188161">Read Fast on the App Store</a></li>
+  </ul>
+  <h2>Privacy and support</h2>
+  <ul>
+    <li><a href="https://omerfaruksahan.github.io/PRIVACY-FastReaders/">Privacy Policy</a>,
+      which also has the contact address for questions.</li>
+  </ul>
+  <footer>Read Fast · © 2026 Ömer Faruk Şahan</footer>
+</main>
+</body>
+</html>
